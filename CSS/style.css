@@ -1,0 +1,234 @@
+:root {
+    --bg-color: #f3f2ef;
+    --card-bg: #ffffff;
+    --primary-blue: #0a66c2;
+    --primary-blue-hover: #004182;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --danger-red: #d11124;
+}
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Cards e Layout */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-section {
+    padding: 20px;
+    position: relative;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--card-bg);
+    position: absolute;
+    top: -100px;
+    background-color: var(--card-bg);
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-info {
+    margin-top: 60px;
+}
+
+h1, h2, h3 { margin: 0 0 10px 0; }
+.text-muted { color: var(--text-muted); }
+
+.section-content { padding: 20px; }
+
+.item { 
+    border-bottom: 1px solid #e0e0e0; 
+    padding-bottom: 15px; 
+    margin-bottom: 15px; 
+    position: relative;
+}
+.item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--primary-blue);
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-blue);
+}
+
+.btn-outline:hover {
+    background-color: rgba(10, 102, 194, 0.1);
+}
+
+/* Estilo para o botão de exclusão */
+.btn-danger {
+    border-color: var(--danger-red);
+    color: var(--danger-red);
+}
+
+.btn-danger:hover {
+    background-color: rgba(209, 17, 36, 0.1);
+}
+
+.btn-edit { 
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+}
+
+.btn-add { 
+    float: right; 
+}
+
+.actions-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Tag de competência */
+.badge {
+    background-color: #e8e6df;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 5px 5px 0;
+}
+
+.badge-delete {
+    color: var(--danger-red);
+    text-decoration: none;
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro transparente */
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover {
+    color: var(--danger-red);
+}
+
+/* Formulários dentro do Modal */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-blue-hover);
+}
