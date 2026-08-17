@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-family: "Segoe UI", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-dark);
     margin: 0;
@@ -21,7 +21,6 @@ body {
     margin: 0 auto;
 }
 
-/* Cards e Layout */
 .card {
     background-color: var(--card-bg);
     border-radius: 10px;
@@ -71,9 +70,9 @@ h1, h2, h3 { margin: 0 0 10px 0; }
     margin-bottom: 15px; 
     position: relative;
 }
+
 .item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-/* Botões */
 .btn {
     display: inline-block;
     padding: 6px 16px;
@@ -95,7 +94,6 @@ h1, h2, h3 { margin: 0 0 10px 0; }
     background-color: rgba(10, 102, 194, 0.1);
 }
 
-/* Estilo para o botão de exclusão */
 .btn-danger {
     border-color: var(--danger-red);
     color: var(--danger-red);
@@ -121,7 +119,6 @@ h1, h2, h3 { margin: 0 0 10px 0; }
     gap: 10px;
 }
 
-/* Tag de competência */
 .badge {
     background-color: #e8e6df;
     padding: 5px 12px;
@@ -141,14 +138,14 @@ h1, h2, h3 { margin: 0 0 10px 0; }
 }
 
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro transparente */
+    background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(2px);
 }
 
@@ -161,10 +158,10 @@ h1, h2, h3 { margin: 0 0 10px 0; }
     max-width: 500px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     position: relative;
-    animation: slideIn 0.3s ease-out;
+    animation: aparecer 0.3s ease-out;
 }
 
-@keyframes slideIn {
+@keyframes aparecer {
     from { transform: translateY(-20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
@@ -184,7 +181,6 @@ h1, h2, h3 { margin: 0 0 10px 0; }
     color: var(--danger-red);
 }
 
-/* Formulários dentro do Modal */
 .form-group {
     margin-bottom: 15px;
 }
